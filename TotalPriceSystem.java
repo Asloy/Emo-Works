@@ -77,55 +77,51 @@ public class TotalPriceSystem {
             discount = 0.05 * totalPrice; // 5% discount if total amount kung less 100
         }
         
-        // Calculating the final amount after discount
+        //pag compute para sa discount
         double finalAmount = totalPrice - discount;
         
-        // Displaying the discount and final amount using JOptionPane
+        // pagpakita sa discount and final amount
         JOptionPane.showMessageDialog(null, "Total amount: $" + totalPrice +
                 "\nDiscount: $" + discount +
                 "\nFinal amount after discount: $" + finalAmount);
-        // Display the selected products and total
+        // pagpakita sa imong gipalit ug imong bayrunon
         String message = "Selected Products:\n" + selectedProducts + "\nFinal amount after discount: $" + finalAmount;
         JOptionPane.showMessageDialog(null, message, "Order Summary", JOptionPane.INFORMATION_MESSAGE);
-          String bayrunon = "\nFinal amount after discount: $" + finalAmount ;
+        }
+        double discount = 0.0;
+                double finalAmount = totalPrice - discount;
+        String bayrunon = "\nFinal amount after discount: $" + finalAmount ;
         String totalCostString = JOptionPane.showInputDialog(null,bayrunon,"\nEnter Value Below", JOptionPane.INFORMATION_MESSAGE );   
          JOptionPane.showMessageDialog(null,"BAYAD SA CHUY!!","CASHIER...", JOptionPane.PLAIN_MESSAGE);
           
         double totalCost = Double.parseDouble(totalCostString);
 
-        // Get the amount paid by the customer
+        // kuha sa info kung pila ang imong kwarta 
          String amountPaidString = JOptionPane.showInputDialog("pila imong kwarta?");
         double amountPaid = Double.parseDouble(amountPaidString);
 
-        // Calculate the change
+        //sinsilyo
         double change = amountPaid - totalCost;
 
-        // Display the change to the customer
+        // diri nimo makita pila imong sinsilyo
         if (change >= 0) {
             JOptionPane.showMessageDialog(null, "sukli nimo kay $" + change);
-        } else {
-            JOptionPane.showMessageDialog(null, "Insufficient amount paid. Please provide more funds.");
-        }
-        }
-         int input = 0;
-         
-                    try {
-                        input = Integer.parseInt(choiceStr);
+        } else {JOptionPane.showMessageDialog(null, "Insufficient amount paid. Please provide more funds.");
+        
+        }int input = 0;
+                    try {input = Integer.parseInt(choiceStr);
                         intList.add(input);
                     } catch (NumberFormatException e) {
                         JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid number.");
-                    }
-
-                    break;
+                    } break;
             case 2:
                     keepGoing = false;
                     JOptionPane.showMessageDialog(null, "Goodbye");
                     break;
-        
-                default:
+        default:
                     JOptionPane.showMessageDialog(null, "Enter a value between 1 and 2 that correspods to what you want to do.");
                     break;
     }
         }
     }
-}
+
