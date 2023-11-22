@@ -13,9 +13,7 @@ public class EmoMultiTable {
             System.out.print("Pag type ug number to generate a table : ");
             num = scanner.nextInt();
         }
-
-        // Print the multiplication table using a for loop
-        System.out.println("Multiplication table for " + num + ":");
+				System.out.println("Multiplication table for " + num + ":");
         for (int i = 1; i <= 10; i++) {
             int product = num * i;
             System.out.println(num + " x " + i + " = " + product);
