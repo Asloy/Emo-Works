@@ -94,8 +94,8 @@ public class Store {
         }
         //pag compute para sa discount
         double finalAmount = totalPrice - discount;
-         String bayrunon = "Selected Products:\n" + selectedProducts + "\nMao ni Imong bayrunon: $" + finalAmount ;
-        String totalCostString = JOptionPane.showInputDialog(null,bayrunon,"\nEnter Value Below", JOptionPane.INFORMATION_MESSAGE );
+         String bayrunon = "Selected Products:\n" + selectedProducts + "\nMao ni Imong bayrunon: $" + "\nSunduga palihog" +finalAmount ;
+        String totalCostString = JOptionPane.showInputDialog(null,bayrunon,"\nSunduga ang naka butang nga amount!!", JOptionPane.INFORMATION_MESSAGE );
                   
          JOptionPane.showMessageDialog(null,"BAYAD SA CHUY!!","CASHIER...", JOptionPane.PLAIN_MESSAGE);
           
