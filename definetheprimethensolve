@@ -13,7 +13,11 @@ public class Definetheprimethensolve {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-for (int i=2 ;i<= 50;i++){
+Scanner input=new Scanner(System.in);
+        System.out.println(" Enter a number: ");
+        int v = input.nextInt();
+          
+for (int i=2 ;i<= v;i++){
     boolean prime= true; 
         for (int j =2;j< i; j++){
         if (i % j == 0){
@@ -25,9 +29,9 @@ for (int i=2 ;i<= 50;i++){
 System.out.println(i + ":is Prime");
       }
   } 
-     Scanner input=new Scanner(System.in);
+     
  int sum =2 ;
- for (int i =0; i <50 ; i++) {
+ for (int i =0; i <v ; i++) {
      for (int a = 2; a<i ; a++){
      if (i%a== 0) {
         break;
