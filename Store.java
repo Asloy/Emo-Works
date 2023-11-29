@@ -111,7 +111,9 @@ public class Store {
         // diri nimo makita pila imong sinsilyo
         if (change >= 0) {
             JOptionPane.showMessageDialog(null, "sukli nimo kay $" + change);
-        } else {JOptionPane.showMessageDialog(null, "Kulang tawon na do");
+            break;
+        } else {
+            JOptionPane.showMessageDialog(null, "Kulang tawon na do");
          
         int a=JOptionPane.showConfirmDialog(null,"Unsa man mu dungag kag Cash of di naka mamalit?","Pili do!",JOptionPane.YES_NO_OPTION);
        System.out.println(a);
@@ -122,8 +124,9 @@ public class Store {
                String DungagString = JOptionPane.showInputDialog("pilay idungag nimong kwarta?");
         double Dungag = Double.parseDouble(DungagString);
            double sukli = amountPaid + Dungag;
-        if (sukli >= 0) {
-            JOptionPane.showMessageDialog(null, "sukli nimo kay $" + change);
+           double sobra = sukli-totalCost;
+        if (sobra >= 0) {
+            JOptionPane.showMessageDialog(null, "sukli nimo kay $" + sobra);
         } else {JOptionPane.showMessageDialog(null, "Kulang tawon na do");
         break;
         }int input = 0;
